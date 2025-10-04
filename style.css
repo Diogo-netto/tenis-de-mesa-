@@ -318,7 +318,7 @@ nav a:hover {
     background: rgba(255, 255, 255, 0.05);
     padding: 30px;
     border-radius: 15px;
-    width: 500px;
+    width: 900px;
     max-width: 100%;
     transition: 0.3s;
     text-align: center;
@@ -346,9 +346,28 @@ nav a:hover {
 }
 
 .treinador-card p {
-    font-size: 1rem;
-    color: var(--branco); /* Use a variável de cor do seu tema */
-    line-height: 1.6;
+  font-size: 1rem;
+  color: var(--branco);
+  line-height: 1.6;
+}
+
+.treinador-card .titulos {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  list-style: none; /* tira bolinhas da lista */
+}
+
+.treinador-card .titulos li {
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--branco);
+}
+
+.treinador-card .titulos li strong {
+  font-weight: bold;
+  font-size: 1.15rem; /* um pouquinho maior pra destacar */
+  color: #ffd700; /* destaque em dourado, pode trocar */
 }
 
 
