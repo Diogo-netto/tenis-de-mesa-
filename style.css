@@ -384,6 +384,12 @@ nav a:hover {
     color: #ffd700; /* destaque em dourado, pode trocar */
 }
 
+@media (max-width: 768px) {
+    .titulos li {
+        margin-left: -25px;
+    }
+}
+
 
 /* GALERIA */
 .treinos {
@@ -394,6 +400,14 @@ nav a:hover {
     margin: 0 auto;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
+
+
+@media (max-width: 768px) {
+    .galeria {
+        margin-left: -15px;
+    }
+}
+
 
 .treinos h3 {
     text-align: center;
