@@ -127,16 +127,19 @@ nav a:hover {
         display: block;
     }
 
+
+    body {
+       overflow-x: hidden;
+    }
+
     /* CORREÇÃO DO MENU MOBILE */
     #menu {
         position: fixed; 
         top: 65px; /* Altura ajustada para ficar abaixo do cabeçalho */
         right: 0;
+        left: auto;
         width: 75%; /* Largura do menu */
-        /* **CORRIGIDO:** Ocupa 100% da altura da tela menos a altura do cabeçalho */
         height: calc(100vh - 65px); 
-        
-        /* Fundo Semi-transparente para sobrepor a imagem */
         background-color: rgba(13, 71, 161, 0.95); 
         
         flex-direction: column; 
