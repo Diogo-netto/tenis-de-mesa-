@@ -390,7 +390,6 @@ nav a:hover {
     }
 }
 
-
 /* GALERIA */
 .treinos {
     padding: 80px 20px;
@@ -400,14 +399,6 @@ nav a:hover {
     margin: 0 auto;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
-
-
-@media (max-width: 768px) {
-    .galeria  {
-        margin-left: -15px;
-    }
-}
-
 
 .treinos h3 {
     text-align: center;
@@ -424,7 +415,7 @@ nav a:hover {
     gap: 25px;
 }
 
-/* cards */
+/* --- CARDS --- */
 .card {
     position: relative;
     overflow: hidden;
@@ -432,26 +423,33 @@ nav a:hover {
     box-shadow: 0 6px 20px rgba(0,0,0,0.4);
     cursor: pointer;
     transition: transform 0.3s ease;
+    background-color: #0d1b2a;
+    
+    /* Centraliza a logo dentro do card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card:hover {
     transform: scale(1.05);
 }
 
+/* imagem da logo centralizada e ajustada */
 .card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     display: block;
-    border-radius: 18px;
+    max-width: 80%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
     transition: transform 0.5s ease;
 }
 
 .card:hover img {
-    transform: scale(1.15);
+    transform: scale(1.1);
 }
 
-/* overlay de texto */
+/* --- overlay de texto --- */
 .overlay {
     position: absolute;
     top: 0;
@@ -484,6 +482,57 @@ nav a:hover {
 .overlay p {
     font-size: 1rem;
     line-height: 1.4;
+}
+
+/* --- RESPONSIVIDADE --- */
+
+/* tablets e telas médias */
+@media (max-width: 992px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* celulares */
+@media (max-width: 600px) {
+    .treinos {
+        padding: 60px 15px;
+    }
+
+    .galeria {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 340px;
+        aspect-ratio: 16 / 9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card img {
+        max-width: 80%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .treinos h3 {
+        font-size: 2rem;
+    }
+
+    .overlay h4 {
+        font-size: 1.3rem;
+    }
+
+    .overlay p {
+        font-size: 0.9rem;
+    }
 }
 
 
