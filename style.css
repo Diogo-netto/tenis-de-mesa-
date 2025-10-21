@@ -271,41 +271,76 @@ nav a:hover {
 
 /* SOBRE */
 .sobre {
-    padding: 70px 20px;
-    text-align: center;
+  padding: 100px 20px;
+  text-align: center;
+  background: radial-gradient(circle at top, #0a0f1c, #010409);
+  position: relative;
+  overflow: hidden;
+}
+
+.sobre::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, rgba(0, 238, 255, 0.15), rgba(0, 119, 255, 0.1), transparent 80%);
+  animation: rotateGlow 12s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotateGlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .sobre h3 {
-    font-size: 2.2rem;
-    color: var(--branco);
-    margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: #00e5ff;
+  text-shadow: 0 0 20px rgba(0, 229, 255, 0.6);
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
 }
 
 .cards {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
-.card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 20px;
-    border-radius: 15px;
-    width: 350px;
-    height: 200px;
-    transition: 0.3s;
+.card-sobre {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  border-radius: 15px;
+  padding: 25px;
+  width: 390px;
+  height: 320px;
+  transition: 0.4s ease;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.05);
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+.card-sobre:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.3);
 }
 
-.card h4 {
-    margin-bottom: 10px;
-    font-size: 1.3rem;
-    color: var(--branco);
+.card-sobre h4 {
+  color: #00e5ff;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+}
+
+.card-sobre p {
+  color: #e0e0e0;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 
@@ -390,109 +425,128 @@ nav a:hover {
     }
 }
 
-/* GALERIA */
+/* SEÇÃO GERAL */
 .treinos {
     padding: 80px 20px;
-    background: linear-gradient(135deg, var(--azul-escuro), var(--azul-claro));
+    background: linear-gradient(135deg, #001220, #003366);
     border-radius: 20px;
     max-width: 1200px;
-    margin: 0 auto;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-
-.treinos h3 {
-    text-align: center;
-    font-size: 2.5rem;
+    margin: 60px auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     color: #fff;
-    margin-bottom: 50px;
-    text-transform: uppercase;
+    text-align: center;
+}
+
+/* TÍTULO PRINCIPAL */
+.treinos h3 {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
     letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #00d9ff;
+    text-shadow: 0 0 12px #00d9ff;
 }
 
+/* CONTAINER DE ITENS (Flexbox para alinhar os cards na mesma altura) */
 .galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-}
-
-/* --- CARDS --- */
-.card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 18px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    background-color: #0d1b2a;
-    
-    /* Centraliza a logo dentro do card */
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    gap: 30px;
+    align-items: stretch; /* Garante que todos os itens tenham a mesma altura */
 }
 
-.card:hover {
+/* BLOCO INDIVIDUAL (ATUALIZADO PARA ALINHAMENTO INTERNO) */
+.item-treino {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    width: 320px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    
+    /* NOVO: Configurações de Flexbox para alinhamento */
+    display: flex;
+    flex-direction: column; /* Organiza conteúdo em coluna (imagem, h4, p, a) */
+    justify-content: flex-start; /* Começa o conteúdo de cima */
+}
+
+.item-treino:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* IMAGEM */
+.item-treino img {
+    /* (Mantido o código original) */
+    width: 100%;
+    height: 180px; /* Reduzida um pouco para melhor visual */
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 18px;
+    transition: transform 0.3s ease;
+}
+
+.item-treino:hover img {
     transform: scale(1.05);
 }
 
-/* imagem da logo centralizada e ajustada */
-.card img {
-    display: block;
-    max-width: 80%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 12px;
-    transition: transform 0.5s ease;
-}
-
-.card:hover img {
-    transform: scale(1.1);
-}
-
-/* --- overlay de texto --- */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(13, 27, 42, 0.85);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.card:hover .overlay {
-    opacity: 1;
-}
-
-.overlay h4 {
-    font-size: 1.6rem;
+/* TÍTULO DO TREINO */
+.item-treino h4 {
+    /* (Mantido o código original) */
+    font-size: 1.5rem;
+    color: #00eaff;
     margin-bottom: 12px;
-    color: #00e6ff;
-    text-shadow: 0 0 6px #00e6ff;
+    text-shadow: 0 0 8px #00eaff;
 }
 
-.overlay p {
+/* DESCRIÇÃO (ADICIONADO FLEX-GROW PARA EMPURRAR O BOTÃO PARA BAIXO) */
+.item-treino p {
     font-size: 1rem;
-    line-height: 1.4;
+    color: #ddd;
+    line-height: 1.5;
+    margin-bottom: 18px; 
+    flex-grow: 1; /* Permite que o parágrafo ocupe o espaço extra, alinhando o próximo elemento (botão) na parte inferior */
 }
 
-/* --- RESPONSIVIDADE --- */
+/* BOTÃO/LINK DE AÇÃO (Estiliza a tag <a> como um botão) */
+.btn-saiba-mais {
+    background: #00eaff;
+    border: none;
+    color: #001220;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none; /* Remove o sublinhado padrão de links */
+    display: block; /* Ocupa a largura total para fácil clique, ou use inline-block se preferir ele centralizado e pequeno */
+    margin-top: auto; /* Garante que ele fique sempre na parte inferior se houver espaço extra */
+    width: fit-content; /* Ajusta a largura ao conteúdo */
+    margin-left: auto; /* Centraliza o link (junto com margin-right: auto) */
+    margin-right: auto;
+}
 
-/* tablets e telas médias */
-@media (max-width: 992px) {
-    .galeria {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+.btn-saiba-mais:hover {
+    background: #fff;
+    color: #003366;
+    transform: scale(1.05);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .treinos h3 {
+        font-size: 2rem;
+    }
+    .item-treino {
+        width: 90%;
     }
 }
+
+
+
 
 /* celulares */
 @media (max-width: 600px) {

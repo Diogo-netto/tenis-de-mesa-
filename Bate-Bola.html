@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinos Coletivos - [Nome do Seu CT]</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #001220;
+            color: #fff;
+            line-height: 1.6;
+        }
+        .header-detalhe {
+            background: linear-gradient(90deg, #003366, #001220);
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 5px solid #00eaff;
+        }
+        .header-detalhe h1 {
+            font-size: 3rem;
+            color: #00eaff;
+            font-weight: 900;
+            text-shadow: 0 0 15px rgba(0, 234, 255, 0.8);
+            margin: 0;
+            text-transform: uppercase;
+        }
+        .header-detalhe p{
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .container-detalhe {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        .container-detalhe h2 {
+            color: #00d9ff;
+            border-bottom: 2px solid rgba(0, 217, 255, 0.3);
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .introducao {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            border-left: 4px solid #00eaff;
+            padding-left: 15px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        ul li {
+            background: rgba(0, 217, 255, 0.1);
+            padding: 10px 15px;
+            border-radius: 5px;
+            flex: 1 1 45%;
+            min-width: 250px;
+        }
+        
+        /* REMOÇÃO DOS ESTILOS DO VÍDEO (VIDEO-WRAPPER) */
+        
+        .chamada-final {
+            background: #003366;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .chamada-final h3 {
+            color: #fff;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+        .btn-principal, .btn-voltar {
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+        .btn-principal {
+            background: #00eaff;
+            color: #001220;
+        }
+        .btn-principal:hover {
+            background: #fff;
+            transform: scale(1.05);
+        }
+        .btn-voltar {
+            background: transparent;
+            color: #00eaff;
+            border: 2px solid #00eaff;
+        }
+        .btn-voltar:hover {
+            background: #00eaff;
+            color: #001220;
+        }
+        
+        /* Responsividade básica para o container */
+        @media (max-width: 768px) {
+            .header-detalhe h1 {
+                font-size: 2.2rem;
+            }
+            .header-detalhe p {
+                font-size: 16px;
+            }
+            ul li {
+                flex: 1 1 100%;
+                min-width: auto;
+            }
+        }
+
+        /* --- ESTILOS E ANIMAÇÃO DO CARROSSEL AUTOMÁTICO --- */
+        .carousel-auto {
+            max-width: 800px;
+            margin: 40px auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            height: 350px; /* Altura fixa para o carrossel */
+        }
+
+        .carousel-slides {
+            display: flex;
+            width: 400%; /* 4 slides */
+            height: 100%;
+            /* Animação CSS: 4 slides * 4s por slide = 16s de duração total */
+            animation: slide-show 16s infinite;
+        }
+
+        .slide-item {
+            width: 25%;
+            flex-shrink: 0;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .slide-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* Overlay escuro para a frase */
+        }
+
+        .slide-caption {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+
+        .slide-caption h3 {
+            font-size: 2.5rem;
+            text-shadow: 0 0 10px #000;
+            margin: 0;
+            color: #00eaff;
+        }
+        .slide-caption p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin: 10px 0 0;
+        }
+
+        /* Definição da Animação */
+        @keyframes slide-show {
+            0% { transform: translateX(0%); }      /* Slide 1 (0s) */
+            23% { transform: translateX(0%); }     /* Segura no Slide 1 (4s) */
+            25% { transform: translateX(-25%); }   /* Transiciona para Slide 2 */
+            48% { transform: translateX(-25%); }   /* Segura no Slide 2 (8s) */
+            50% { transform: translateX(-50%); }   /* Transiciona para Slide 3 */
+            73% { transform: translateX(-50%); }   /* Segura no Slide 3 (12s) */
+            75% { transform: translateX(-75%); }   /* Transiciona para Slide 4 */
+            98% { transform: translateX(-75%); }   /* Segura no Slide 4 (16s) */
+            100% { transform: translateX(0%); }    /* Volta para Slide 1 */
+        }
+        /* --- FIM ESTILOS CARROSSEL AUTOMÁTICO --- */
+    </style>
+</head>
+<body>
+
+    <header class="header-detalhe">
+        <h1>Treinos Coletivos</h1>
+        <p>Desenvolvimento tático, espírito de equipe e alto desempenho no Tênis de Mesa.</p>
+    </header>
+    
+    <a href="index.html#treinos" class="btn-voltar" style="margin-top: 20px; margin-left: 20px;">← Voltar para Nossos Treinos</a>
+
+    <section class="carousel-auto">
+        <div class="carousel-slides">
+            
+            <div class="slide-item" style="background-image: url('http://googleusercontent.com/image_collection/image_retrieval/4414675029822212332_0');">
+                <div class="slide-caption">
+                    <h3>Visão de Equipe</h3>
+                    <p>Dominar o jogo tático é o primeiro passo para a vitória coletiva.</p>
+                </div>
+            </div>
+            
+            <div class="slide-item" style="background-image: url('http://googleusercontent.com/image_collection/image_retrieval/4414675029822212332_1');">
+                <div class="slide-caption">
+                    <h3>Ritmo de Competição</h3>
+                    <p>Treinamos na intensidade da final, elevando seu reflexo e potência.</p>
+                </div>
+            </div>
+            
+            <div class="slide-item" style="background-image: url('http://googleusercontent.com/image_collection/image_retrieval/4414675029822212332_2');">
+                <div class="slide-caption">
+                    <h3>Mentalidade de Campeão</h3>
+                    <p>Aprenda a lidar com a pressão em um ambiente de grupo desafiador.</p>
+                </div>
+            </div>
+            
+            <div class="slide-item" style="background-image: url('http://googleusercontent.com/image_collection/image_retrieval/4414675029822212332_3');">
+                <div class="slide-caption">
+                    <h3>Excelência no Detalhe</h3>
+                    <p>Infraestrutura e coaches de elite para aperfeiçoar sua técnica coletiva.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pagina-detalhe">
+        <div class="container-detalhe">
+            <p class="introducao">
+                No nosso CT, o **Treino Coletivo** é a base para o desenvolvimento completo. Não se trata apenas de técnica individual, mas de aprender a jogar sob pressão, criar estratégias de equipe e elevar o nível de todos ao seu redor.
+            </p>
+
+            <h2>Intensidade Máxima e Adaptação Rápida</h2>
+            
+            <p>
+                Os treinos coletivos simulam o ambiente real dos torneios. Você enfrenta diversos estilos de jogo, o que força uma **adaptação tática rápida**. Essa é a única forma de garantir que sua técnica individual funcione contra qualquer adversário e sob qualquer pressão.
+            </p>
+            
+            <h2>Vantagens do Treinamento em Grupo:</h2>
+            <ul>
+                <li>✅ Simulações de Duplas e Equipes (Visão de Jogo).</li>
+                <li>✅ Treinamento Físico e Reflexo (Velocidade e Potência).</li>
+                <li>✅ Análise de Jogo e Estratégia Tática (Leitura do Adversário).</li>
+                <li>✅ Fortalecimento do Espírito de Luta e Resiliência (Mentalidade de Campeão).</li>
+            </ul>
+
+            <div class="chamada-final">
+                <h3>Pronto para Atingir a Sua Melhor Forma?</h3>
+                <p>Junte-se ao time e comece sua jornada de alta performance. **Venha treinar no nosso CT!**</p>
+                <a href="https://wa.me/5531988887777?text=Ola%2C%20gostaria%20de%20agendar%20minha%20aula%20experimental%20de%20Treino%20Coletivo." class="btn-principal" target="_blank">
+                    Agende Sua Aula Experimental Coletiva
+                </a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

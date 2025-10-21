@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinos Coletivos - [Nome do Seu CT]</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #001220;
+            color: #fff;
+            line-height: 1.6;
+        }
+        .header-detalhe {
+            background: linear-gradient(90deg, #003366, #001220);
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 5px solid #00eaff;
+        }
+        .header-detalhe h1 {
+            font-size: 3rem;
+            color: #00eaff;
+            font-weight: 900;
+            text-shadow: 0 0 15px rgba(0, 234, 255, 0.8);
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .header-detalhe p{
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .container-detalhe {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        .container-detalhe h2 {
+            color: #00d9ff;
+            border-bottom: 2px solid rgba(0, 217, 255, 0.3);
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .introducao {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            border-left: 4px solid #00eaff;
+            padding-left: 15px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        ul li {
+            background: rgba(0, 217, 255, 0.1);
+            padding: 10px 15px;
+            border-radius: 5px;
+            flex: 1 1 45%;
+            min-width: 250px;
+        }
+        /* --- ESTILOS DO VÍDEO RESPONSIVO --- */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* ------------------------------------- */
+
+        .chamada-final {
+            background: #003366;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .chamada-final h3 {
+            color: #fff;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+        .btn-principal, .btn-voltar {
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+        .btn-principal {
+            background: #00eaff;
+            color: #001220;
+        }
+        .btn-principal:hover {
+            background: #fff;
+            transform: scale(1.05);
+        }
+        .btn-voltar {
+            background: transparent;
+            color: #00eaff;
+            border: 2px solid #00eaff;
+        }
+        .btn-voltar:hover {
+            background: #00eaff;
+            color: #001220;
+        }
+        /* Responsividade básica para o container */
+        @media (max-width: 768px) {
+            .header-detalhe h1 {
+                font-size: 2.2rem;
+            }
+            .header-detalhe p {
+                font-size: 16px;
+            }
+            ul li {
+                flex: 1 1 100%;
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-detalhe">
+        <h1>Treinos Coletivos</h1>
+        <p>Desenvolvimento tático, espírito de equipe e alto desempenho no Tênis de Mesa.</p>
+    </header>
+    
+    <a href="index.html#treinos" class="btn-voltar" style="margin-top: 20px; margin-left: 20px;">← Voltar para Nossos Treinos</a>
+
+    <section class="pagina-detalhe">
+        <div class="container-detalhe">
+            <p class="introducao">
+                Na nossa Academia, buscamos a excelência do tênis de mesa mundial.
+                Assista ao vídeo abaixo e sinta a intensidade, a precisão e a dedicação que inspiram nossos treinos coletivos. A sua evolução começa aqui!
+            </p>
+
+            <h2>A Excelência do Tênis de Mesa</h2>
+            
+            <div class="video-wrapper">
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/aXYtez5OSIs?si=93NL6KQBg6dITrS1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            
+            <h2>O Foco do Nosso Treino Coletivo:</h2>
+            <p>
+                A técnica de Ma Long exige **velocidade, precisão e leitura de jogo**—habilidades que são aprimoradas em grupo. Nossos treinos focam na alta intensidade e na adaptação rápida, preparando você para encarar qualquer desafio na mesa.
+            </p>
+
+            <ul>
+                <li>✅ Simulações de Duplas e Equipes (Visão de Jogo).</li>
+                <li>✅ Treinamento Físico e Reflexo (Velocidade e Potência).</li>
+                <li>✅ Análise de Jogo e Estratégia Tática (Leitura do Adversário).</li>
+                <li>✅ Fortalecimento do Espírito de Luta e Resiliência (Mentalidade de Campeão).</li>
+            </ul>
+
+            <div class="chamada-final">
+                <h3>Pronto para Atingir a Sua Melhor Forma?</h3>
+                <p>Junte-se ao time e comece sua jornada de alta performance. **Venha treinar no nosso CT!**</p>
+                <a href="https://wa.me/5531988887777?text=Ola%2C%20gostaria%20de%20agendar%20minha%20aula%20experimental%20de%20Treino%20Coletivo." class="btn-principal" target="_blank">
+                    Agende Sua Aula Experimental Coletiva
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </body>
+</html>
