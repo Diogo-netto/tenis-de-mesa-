@@ -145,10 +145,10 @@
 
     <header class="header-detalhe">
         <h1>Treinos Coletivos</h1>
-        <p>Desenvolvimento tático, espírito de equipe e alto desempenho no Tênis de Mesa.</p>
+        <p>Treinos Coletivos de Tênis de Mesa: Tática, Amizade e Alto Nível de Jogo</p>
     </header>
     
-    <a href="index.html#treinos" class="btn-voltar" style="margin-top: 20px; margin-left: 20px;">← Voltar para Nossos Treinos</a>
+    <a href="index.html#treinos" class="btn-voltar" style="margin-top: 20px; margin-left: 20px;">← Voltar para o Site Principal</a>
 
     <section class="pagina-detalhe">
         <div class="container-detalhe">
@@ -165,8 +165,7 @@
             
             <h2>O Foco do Nosso Treino Coletivo:</h2>
             <p>
-                A técnica de Ma Long exige **velocidade, precisão e leitura de jogo**—habilidades que são aprimoradas em grupo. Nossos treinos focam na alta intensidade e na adaptação rápida, preparando você para encarar qualquer desafio na mesa.
-            </p>
+                Um dos maiores ganhos do treino em grupo é a preparação para o ambiente de um torneio. A troca constante com diferentes parceiros de treino não só aprimora sua técnica, mas também fortalece sua <strong>inteligência emocional</strong> em quadra. Você aprende a se adaptar e a lidar com a pressão de forma natural, transformando a tensão em concentração.
 
             <ul>
                 <li>✅ Simulações de Duplas e Equipes (Visão de Jogo).</li>
@@ -177,13 +176,47 @@
 
             <div class="chamada-final">
                 <h3>Pronto para Atingir a Sua Melhor Forma?</h3>
-                <p>Junte-se ao time e comece sua jornada de alta performance. **Venha treinar no nosso CT!**</p>
-                <a href="https://wa.me/5531988887777?text=Ola%2C%20gostaria%20de%20agendar%20minha%20aula%20experimental%20de%20Treino%20Coletivo." class="btn-principal" target="_blank">
-                    Agende Sua Aula Experimental Coletiva
+                <p> Sua jornada para uma nova performance começa no primeiro treino. Venha construir sua melhor versão como atleta conosco. <strong>Agende uma aula experimental em nossa Academia!</strong> </p>
+                <a href="https://wa.me/55319888877?text=Gostaria de fazer uma aula experimental de Treino." class="btn-principal" target="_blank" id="botao-aula-experimental">
+                    Agende Seu Treino Experimental
                 </a>
             </div>
         </div>
     </section>
+
+
+    <script>
+// Espera o conteúdo da página carregar completamente
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Encontra o botão pelo ID que criamos
+    const botaoAgendar = document.getElementById('botao-aula-experimental');
+
+    // Verifica se o botão realmente existe na página
+    if (botaoAgendar) {
+        
+        // Adiciona um "ouvinte" de clique ao botão
+        botaoAgendar.addEventListener('click', function() {
+            
+            console.log('Clique detectado no botão de Aula Experimental!');
+
+            // --- A MÁGICA ACONTECE AQUI ---
+            // Se você usa Google Analytics (GA4), é aqui que você dispara o evento
+            if (typeof gtag === 'function') {
+                gtag('event', 'click', {
+                    'event_category': 'Agendamento',
+                    'event_label': 'Botao_Whatsapp_Aula_Experimental',
+                    'value': 1
+                });
+            }
+            
+            // Você pode adicionar outras ferramentas de análise aqui também (Facebook Pixel, etc)
+            // fbq('track', 'Lead');
+
+        });
+    }
+});
+</script>
 
     </body>
 </html>

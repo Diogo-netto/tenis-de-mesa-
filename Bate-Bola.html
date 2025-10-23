@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treinos Coletivos - [Nome do Seu CT]</title>
+    <title>Day Use </title>
     
     <style>
         body {
@@ -82,6 +82,10 @@
             margin-top: 0;
             font-size: 1.8rem;
         }
+
+        .chamada-final p {
+            font-weight: 700;
+        }
         .btn-principal, .btn-voltar {
             text-decoration: none;
             padding: 12px 30px;
@@ -138,8 +142,7 @@
             display: flex;
             width: 400%; /* 4 slides */
             height: 100%;
-            /* Animação CSS: 4 slides * 4s por slide = 16s de duração total */
-            animation: slide-show 16s infinite;
+            animation: slide-show 32s infinite;
         }
 
         .slide-item {
@@ -162,7 +165,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.4); /* Overlay escuro para a frase */
+            background: rgba(0, 0, 0, 0.637); /* Overlay escuro para a frase */
         }
 
         .slide-caption {
@@ -177,64 +180,75 @@
             margin: 0;
             color: #00eaff;
         }
-        .slide-caption p {
-            font-size: 1.2rem;
-            font-weight: 300;
-            margin: 10px 0 0;
-        }
+        
 
         /* Definição da Animação */
-        @keyframes slide-show {
-            0% { transform: translateX(0%); }      /* Slide 1 (0s) */
-            23% { transform: translateX(0%); }     /* Segura no Slide 1 (4s) */
-            25% { transform: translateX(-25%); }   /* Transiciona para Slide 2 */
-            48% { transform: translateX(-25%); }   /* Segura no Slide 2 (8s) */
-            50% { transform: translateX(-50%); }   /* Transiciona para Slide 3 */
-            73% { transform: translateX(-50%); }   /* Segura no Slide 3 (12s) */
-            75% { transform: translateX(-75%); }   /* Transiciona para Slide 4 */
-            98% { transform: translateX(-75%); }   /* Segura no Slide 4 (16s) */
-            100% { transform: translateX(0%); }    /* Volta para Slide 1 */
-        }
-        /* --- FIM ESTILOS CARROSSEL AUTOMÁTICO --- */
+@keyframes slide-show {
+    /* Novos percentuais baseados em 32 segundos (8s por slide) */
+    
+    /* SLIDE 1: 0% a 25% */
+    0% { transform: translateX(0%); }      /* Início (0s) */
+    24% { transform: translateX(0%); }     /* Segura no Slide 1 (7.68s) */
+    
+    /* TRANSIÇÃO 1 -> 2 */
+    25% { transform: translateX(-25%); }   /* Transiciona para Slide 2 (8s) */
+    
+    /* SLIDE 2: 25% a 50% */
+    49% { transform: translateX(-25%); }   /* Segura no Slide 2 (15.68s) */
+    
+    /* TRANSIÇÃO 2 -> 3 */
+    50% { transform: translateX(-50%); }   /* Transiciona para Slide 3 (16s) */
+    
+    /* SLIDE 3: 50% a 75% */
+    74% { transform: translateX(-50%); }   /* Segura no Slide 3 (23.68s) */
+    
+    /* TRANSIÇÃO 3 -> 4 */
+    75% { transform: translateX(-75%); }   /* Transiciona para Slide 4 (24s) */
+    
+    /* SLIDE 4: 75% a 100% */
+    99% { transform: translateX(-75%); }   /* Segura no Slide 4 (31.68s) */
+    100% { transform: translateX(0%); }    /* Volta para Slide 1 (32s) */
+}
+/* --- FIM ESTILOS CARROSSEL AUTOMÁTICO --- */
     </style>
 </head>
 <body>
 
     <header class="header-detalhe">
-        <h1>Treinos Coletivos</h1>
-        <p>Desenvolvimento tático, espírito de equipe e alto desempenho no Tênis de Mesa.</p>
+        <h1>Day Use</h1>
+        <p>Treine, Jogue, Vença: A Evolução Tática do Tênis de Mesa, do Treino Livre à Excelência em Jogo.</p>
     </header>
     
-    <a href="index.html#treinos" class="btn-voltar" style="margin-top: 20px; margin-left: 20px;">← Voltar para Nossos Treinos</a>
+    <a href="index.html#treinos" class="btn-voltar" style="margin-top: 20px; margin-left: 20px;">← Voltar para o Site Principal</a>
 
     <section class="carousel-auto">
         <div class="carousel-slides">
             
-            <div class="slide-item" style="background-image: url('http://googleusercontent.com/image_collection/image_retrieval/4414675029822212332_0');">
+            <div class="slide-item" style="background-image: url('img/Imagem\ do\ WhatsApp\ de\ 2025-10-20\ à\(s\)\ 23.01.56_36961442.jpg');">
                 <div class="slide-caption">
                     <h3>Visão de Equipe</h3>
-                    <p>Dominar o jogo tático é o primeiro passo para a vitória coletiva.</p>
+                    
                 </div>
             </div>
             
-            <div class="slide-item" style="background-image: url('http://googleusercontent.com/image_collection/image_retrieval/4414675029822212332_1');">
+            <div class="slide-item" style="background-image: url('img/Imagem\ do\ WhatsApp\ de\ 2025-10-20\ à\(s\)\ 23.01.55_52a763e0.jpg');">
                 <div class="slide-caption">
                     <h3>Ritmo de Competição</h3>
-                    <p>Treinamos na intensidade da final, elevando seu reflexo e potência.</p>
+                    
                 </div>
             </div>
             
-            <div class="slide-item" style="background-image: url('http://googleusercontent.com/image_collection/image_retrieval/4414675029822212332_2');">
+            <div class="slide-item" style="background-image: url('img/Imagem\ do\ WhatsApp\ de\ 2025-10-20\ à\(s\)\ 23.01.56_3a8e0dc3.jpg');">
                 <div class="slide-caption">
                     <h3>Mentalidade de Campeão</h3>
-                    <p>Aprenda a lidar com a pressão em um ambiente de grupo desafiador.</p>
+                    
                 </div>
             </div>
             
-            <div class="slide-item" style="background-image: url('http://googleusercontent.com/image_collection/image_retrieval/4414675029822212332_3');">
+            <div class="slide-item" style="background-image: url('img/Imagem\ do\ WhatsApp\ de\ 2025-10-20\ à\(s\)\ 23.01.56_aa8838cd.jpg');">
                 <div class="slide-caption">
                     <h3>Excelência no Detalhe</h3>
-                    <p>Infraestrutura e coaches de elite para aperfeiçoar sua técnica coletiva.</p>
+                   
                 </div>
             </div>
         </div>
@@ -242,28 +256,28 @@
     <section class="pagina-detalhe">
         <div class="container-detalhe">
             <p class="introducao">
-                No nosso CT, o **Treino Coletivo** é a base para o desenvolvimento completo. Não se trata apenas de técnica individual, mas de aprender a jogar sob pressão, criar estratégias de equipe e elevar o nível de todos ao seu redor.
+                "Com o Day Use, nossa estrutura de elite fica à sua disposição. Utilize as mesas e o espaço profissional para focar em seu desenvolvimento pessoal e na prática livre, garantindo que seu desempenho esteja sempre no máximo nível."
             </p>
 
-            <h2>Intensidade Máxima e Adaptação Rápida</h2>
-            
-            <p>
-                Os treinos coletivos simulam o ambiente real dos torneios. Você enfrenta diversos estilos de jogo, o que força uma **adaptação tática rápida**. Essa é a única forma de garantir que sua técnica individual funcione contra qualquer adversário e sob qualquer pressão.
-            </p>
-            
-            <h2>Vantagens do Treinamento em Grupo:</h2>
-            <ul>
-                <li>✅ Simulações de Duplas e Equipes (Visão de Jogo).</li>
-                <li>✅ Treinamento Físico e Reflexo (Velocidade e Potência).</li>
-                <li>✅ Análise de Jogo e Estratégia Tática (Leitura do Adversário).</li>
-                <li>✅ Fortalecimento do Espírito de Luta e Resiliência (Mentalidade de Campeão).</li>
-            </ul>
+            <h2>Aproveite ao Máximo: Seu Dia Livre de Tênis de Mesa (Day Use)</h2>
+			
+			<p>
+				O seu **Dia Livre** é a chance de colocar sua técnica em ação sem a rigidez de um treino programado. Aqui, você encontra o ambiente e parceiros ideais para **enfrentar diversos estilos de jogo**, forçando sua **adaptação tática rápida** no ritmo que escolher. Essa é a maneira mais pura de garantir que sua técnica funcione sob qualquer condição de jogo.
+			</p>
+			
+			<h2>Vantagens da Prática Livre em Nosso CT:</h2>
+			<ul>
+				<li>✅ Acesso a parceiros de diferentes níveis (Adaptação a Estilos Variados).</li>
+				<li>✅ Prática Ilimitada de Bate-Bola (Ritmo e Consistência).</li>
+				<li>✅ Teste de Novas Táticas e Saques (Experimentação e Estratégia Pessoal).</li>
+				<li>✅ Imersão no Ambiente de Alta Performance (Foco e Mentalidade).</li>
+			</ul>
 
             <div class="chamada-final">
                 <h3>Pronto para Atingir a Sua Melhor Forma?</h3>
-                <p>Junte-se ao time e comece sua jornada de alta performance. **Venha treinar no nosso CT!**</p>
-                <a href="https://wa.me/5531988887777?text=Ola%2C%20gostaria%20de%20agendar%20minha%20aula%20experimental%20de%20Treino%20Coletivo." class="btn-principal" target="_blank">
-                    Agende Sua Aula Experimental Coletiva
+                <p>Sua jornada para uma nova performance começa no primeiro treino. Venha construir sua melhor versão como atleta conosco.</p>
+                <a href="https://wa.me/5531988887?text=Ola%2C%20gostaria%20de%20agendar%20minha%20aula%20experimental%20de%20Treino%20Coletivo." class="btn-principal" target="_blank">
+                    Agende Seu Treino Experimental
                 </a>
             </div>
         </div>
