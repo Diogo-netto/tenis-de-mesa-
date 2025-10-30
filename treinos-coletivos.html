@@ -62,12 +62,50 @@
             gap: 15px;
             margin-top: 20px;
         }
-        ul li {
-            background: rgba(0, 217, 255, 0.1);
-            padding: 10px 15px;
-            border-radius: 5px;
-            flex: 1 1 45%;
-            min-width: 250px;
+        
+
+        
+        .container-detalhe h2 {
+            color: #00d9ff;
+            padding-bottom: 0; 
+            margin-top: 30px;
+            text-shadow: 0 0 5px rgba(0, 217, 255, 0.3);
+            border-bottom: none;
+        }
+
+        .beneficios-grid {
+            list-style: none;
+            padding: 0;
+            display: grid; 
+            grid-template-columns: 1fr 1fr;
+            gap: 25px; 
+            margin-top: 20px;
+        }
+        
+        .beneficios-grid li {
+            background: #003366; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+            border-left: 5px solid #00eaff; 
+            font-weight: bold;
+            display: flex; 
+            align-items: center;
+            min-height: 80px; 
+        }
+        
+        .beneficios-grid li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 234, 255, 0.3);
+            border-left: 5px solid #fff; 
+        }
+
+        .beneficios-grid li::before {
+            content: '🎯'; 
+            font-size: 1.5rem;
+            margin-right: 15px;
+            flex-shrink: 0; 
         }
         /* --- ESTILOS DO VÍDEO RESPONSIVO --- */
         .video-wrapper {
@@ -166,13 +204,15 @@
             <h2>O Foco do Nosso Treino Coletivo:</h2>
             <p>
                 Um dos maiores ganhos do treino em grupo é a preparação para o ambiente de um torneio. A troca constante com diferentes parceiros de treino não só aprimora sua técnica, mas também fortalece sua <strong>inteligência emocional</strong> em quadra. Você aprende a se adaptar e a lidar com a pressão de forma natural, transformando a tensão em concentração.
+            
 
-            <ul>
-                <li>✅ Simulações de Duplas e Equipes (Visão de Jogo).</li>
-                <li>✅ Treinamento Físico e Reflexo (Velocidade e Potência).</li>
-                <li>✅ Análise de Jogo e Estratégia Tática (Leitura do Adversário).</li>
-                <li>✅ Fortalecimento do Espírito de Luta e Resiliência (Mentalidade de Campeão).</li>
+            <ul class="beneficios-grid">
+                <li> Simulações de Duplas e Equipes (Visão de Jogo).</li>
+                <li>Treinamento Físico e Reflexo (Velocidade e Potência).</li>
+                <li>Análise de Jogo e Estratégia Tática (Leitura do Adversário).</li>
+                <li>Fortalecimento do Espírito de Luta e Resiliência (Mentalidade).</li>
             </ul>
+            
 
             <div class="chamada-final">
                 <h3>Pronto para Atingir a Sua Melhor Forma?</h3>

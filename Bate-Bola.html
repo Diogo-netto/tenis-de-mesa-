@@ -52,20 +52,51 @@
             border-left: 4px solid #00eaff;
             padding-left: 15px;
         }
-        ul {
+        
+
+        /* NOVO ESTILO PARA H2 E LISTA DE BENEFÍCIOS (MANTIDOS) */
+
+        .container-detalhe h2 {
+            color: #00d9ff;
+            padding-bottom: 0; 
+            margin-top: 30px;
+            text-shadow: 0 0 5px rgba(0, 217, 255, 0.3);
+            border-bottom: none;
+        }
+
+        .beneficios-grid {
             list-style: none;
             padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
+            display: grid; 
+            grid-template-columns: 1fr 1fr;
+            gap: 25px; 
             margin-top: 20px;
         }
-        ul li {
-            background: rgba(0, 217, 255, 0.1);
-            padding: 10px 15px;
-            border-radius: 5px;
-            flex: 1 1 45%;
-            min-width: 250px;
+        
+        .beneficios-grid li {
+            background: #003366; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+            border-left: 5px solid #00eaff; 
+            font-weight: bold;
+            display: flex; 
+            align-items: center;
+            min-height: 80px; 
+        }
+        
+        .beneficios-grid li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 234, 255, 0.3);
+            border-left: 5px solid #fff; 
+        }
+
+        .beneficios-grid li::before {
+            content: '🎯'; 
+            font-size: 1.5rem;
+            margin-right: 15px;
+            flex-shrink: 0; 
         }
         
         /* REMOÇÃO DOS ESTILOS DO VÍDEO (VIDEO-WRAPPER) */
@@ -262,17 +293,16 @@
             <h2>Aproveite ao Máximo: Seu Dia Livre de Tênis de Mesa (Day Use)</h2>
 			
 			<p>
-				O seu **Dia Livre** é a chance de colocar sua técnica em ação sem a rigidez de um treino programado. Aqui, você encontra o ambiente e parceiros ideais para **enfrentar diversos estilos de jogo**, forçando sua **adaptação tática rápida** no ritmo que escolher. Essa é a maneira mais pura de garantir que sua técnica funcione sob qualquer condição de jogo.
+				O seu Dia Livre é a chance de colocar sua técnica em ação sem a rigidez de um treino programado. Aqui, você encontra o ambiente  ideal para enfrentar diversos estilos de jogo, forçando sua adaptação tática e rápida no ritmo que escolher. Essa é a maneira mais pura de garantir que sua técnica funcione sob qualquer condição de jogo.
 			</p>
 			
 			<h2>Vantagens da Prática Livre em Nosso CT:</h2>
-			<ul>
-				<li>✅ Acesso a parceiros de diferentes níveis (Adaptação a Estilos Variados).</li>
-				<li>✅ Prática Ilimitada de Bate-Bola (Ritmo e Consistência).</li>
-				<li>✅ Teste de Novas Táticas e Saques (Experimentação e Estratégia Pessoal).</li>
-				<li>✅ Imersão no Ambiente de Alta Performance (Foco e Mentalidade).</li>
-			</ul>
-
+			<ul class="beneficios-grid">
+                <li>Acesso a parceiros de diferentes niveis (Adaptação a estilos Variados).</li>
+                <li>Prática limitada de Bate-Bola (Ritmo e consistência).</li>
+                <li>Teste de novas Táticas e Saques (Experimente).</li>
+                <li>Imersão no ambiente de alta performace (Foco E Mentalidade).</li>
+            </ul>
             <div class="chamada-final">
                 <h3>Pronto para Atingir a Sua Melhor Forma?</h3>
                 <p>Sua jornada para uma nova performance começa no primeiro treino. Venha construir sua melhor versão como atleta conosco.</p>

@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treino Individual - [Nome do Seu CT]</title>
+    <title>Treino Individual </title>
     
     <style>
+        /* ESTILOS ORIGINAIS (MANTIDOS) */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -23,9 +24,14 @@
         .header-detalhe h1 {
             font-size: 3rem;
             color: #00eaff;
+            font-weight: 900;
             text-shadow: 0 0 15px rgba(0, 234, 255, 0.8);
             margin: 0;
             text-transform: uppercase;
+        }
+        .header-detalhe p{
+            font-size: 20px;
+            font-weight: 700;
         }
         .container-detalhe {
             max-width: 900px;
@@ -35,28 +41,59 @@
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
-        .container-detalhe h2 {
-            color: #00d9ff;
-            border-bottom: 2px solid rgba(0, 217, 255, 0.3);
-            padding-bottom: 10px;
-            margin-top: 30px;
-        }
         .introducao {
             font-size: 1.1rem;
             margin-bottom: 30px;
             border-left: 4px solid #00eaff;
             padding-left: 15px;
         }
-        ul {
+        
+        /* NOVO ESTILO PARA H2 E LISTA DE BENEFÍCIOS (MANTIDOS) */
+
+        .container-detalhe h2 {
+            color: #00d9ff;
+            padding-bottom: 0; 
+            margin-top: 30px;
+            text-shadow: 0 0 5px rgba(0, 217, 255, 0.3);
+            border-bottom: none;
+        }
+
+        .beneficios-grid {
             list-style: none;
             padding: 0;
+            display: grid; 
+            grid-template-columns: 1fr 1fr;
+            gap: 25px; 
+            margin-top: 20px;
         }
-        ul li {
-            background: rgba(0, 217, 255, 0.1);
-            margin-bottom: 10px;
-            padding: 10px 15px;
-            border-radius: 5px;
+        
+        .beneficios-grid li {
+            background: #003366; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+            border-left: 5px solid #00eaff; 
+            font-weight: bold;
+            display: flex; 
+            align-items: center;
+            min-height: 80px; 
         }
+        
+        .beneficios-grid li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 234, 255, 0.3);
+            border-left: 5px solid #fff; 
+        }
+
+        .beneficios-grid li::before {
+            content: '🎯'; 
+            font-size: 1.5rem;
+            margin-right: 15px;
+            flex-shrink: 0; 
+        }
+        
+        /* CHAMADA FINAL E BOTÕES (MANTIDOS) */
         .chamada-final {
             background: #003366;
             padding: 30px;
@@ -68,6 +105,10 @@
             color: #fff;
             margin-top: 0;
             font-size: 1.8rem;
+        }
+
+        .chamada-final p {
+            font-weight: 700;
         }
         .btn-principal, .btn-voltar {
             text-decoration: none;
@@ -95,49 +136,143 @@
             background: #00eaff;
             color: #001220;
         }
+        
+        /* --- NOVO ESTILO: DESTAQUE DE IMAGEM ÚNICA (SUBSTITUI CARROSSEL) --- */
+
+        .image-highlight {
+            max-width: 900px;
+            margin: 40px auto;
+            height: 350px; 
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 234, 255, 0.4), 0 5px 15px rgba(0, 0, 0, 0.9);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end; 
+            padding-right: 5%;
+        }
+
+        .image-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(0, 18, 32, 0.8) 40%, rgba(0, 18, 32, 0.3) 100%);
+            z-index: 1;
+        }
+
+        .highlight-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            width: 45%; 
+            text-align: right;
+        }
+
+        .highlight-content h2 {
+            font-size: 2.2rem;
+            color: #00eaff;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(0, 234, 255, 0.6);
+        }
+
+        .key-points {
+            list-style: none;
+            padding: 0;
+        }
+
+        .key-points li {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: right;
+        }
+        
+        /* Responsividade (AJUSTADA) */
+        @media (max-width: 768px) {
+            .header-detalhe h1 {
+                font-size: 2.2rem;
+            }
+            .header-detalhe p {
+                font-size: 16px;
+            }
+            .beneficios-grid {
+                grid-template-columns: 1fr;
+            }
+            /* Responsividade da nova seção */
+            .image-highlight {
+                justify-content: center;
+                padding-right: 0;
+                height: 250px;
+            }
+            .highlight-content {
+                width: 80%;
+                text-align: center;
+            }
+            .highlight-content h2 {
+                font-size: 1.8rem;
+            }
+            .image-highlight::before {
+                background: rgba(0, 18, 32, 0.8);
+            }
+            .key-points li {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
 
     <header class="header-detalhe">
-        <h1>Treino Individual: Foco Total no Seu Potencial</h1>
-        <p>Atenção exclusiva e planejamento técnico-mental personalizado com nossos coaches.</p>
-        <a href="index.html#treinos" class="btn-voltar">← Voltar para Nossos Treinos</a>
+        <h1>Treino Individual</h1>
+        <p>Potencialize Seu Jogo: Foco Exclusivo, Correção Detalhada e Rota Rápida para a Excelência Técnica e Tática.</p>
     </header>
+    
+    <a href="index.html#treinos" class="btn-voltar" style="margin-top: 20px; margin-left: 20px;">← Voltar para o Site Principal</a>
 
+    <section class="image-highlight" style="background-image: url('img/Imagem\ do\ WhatsApp\ de\ 2025-10-20\ à\(s\)\ 23.01.55_52a763e0.jpg');">
+        <div class="highlight-content">
+            <h2>Seu Foco, Nosso Alvo</h2>
+            <ul class="key-points">
+                <li>🎯 Personalização Total</li>
+                <li>📈 Rápida Evolução Técnica</li>
+            </ul>
+        </div>
+    </section>
     <section class="pagina-detalhe">
         <div class="container-detalhe">
             <p class="introducao">
-                Para o atleta que busca a excelência, o Treino Individual é o caminho mais rápido. Nossos coaches dedicam 100% da atenção para identificar e corrigir os pontos fracos e maximizar seus pontos fortes. **Este é o foco que transforma um bom jogador em um competidor de elite.**
+                "O Treino Individual é a sua sessão de elite. Com a atenção total do técnico, cada minuto é focado na correção das suas fraquezas e na potencialização de seus pontos fortes. É a rota mais rápida e eficiente para o seu desenvolvimento no Tênis de Mesa."
             </p>
 
-            <h2>Análise e Correção Detalhada</h2>
+            <h2>Maximize Seu Potencial: O Poder do Treino Individual (Personalizado)</h2>
+            
             <p>
-                O Tênis de Mesa é um esporte de milissegundos. No treino individual, cada movimento (saque, recepção, postura, rotação de quadril) é analisado em detalhes. Usamos a tecnologia do nosso CT e a vasta experiência dos nossos técnicos para refinar sua técnica, garantindo que você jogue de forma mais eficiente e com menos desgaste.
+                No treino individual, o planejamento é feito **exclusivamente para você**. Analisamos seu estilo de jogo, suas metas e criamos exercícios específicos para aprimorar saques, recepções, movimentos de perna e sequências táticas que farão a diferença em competição. É a chance de eliminar vícios e construir uma técnica sólida, passo a passo.
             </p>
             
-            <h2>Evolução Mental e Estratégica</h2>
-            <p>
-                Além da técnica, o Treino Individual aborda o lado mental. Trabalhamos a pressão em momentos cruciais do jogo, a tomada de decisão e a resiliência. Você terá um plano de desenvolvimento estratégico que não só melhora o seu jogo, mas também a sua confiança dentro e fora da mesa. **Seu sucesso é a nossa missão!**
-            </p>
-
-            <h2>Benefícios Exclusivos do Treino Individual:</h2>
-            <ul>
-                <li>🎯  Sessões 100% personalizadas ao seu nível.</li>
-                <li>🎯  Correção imediata e aprofundada de erros técnicos.</li>
-                <li>🎯  Planejamento de jogo focado em seus adversários.</li>
-                <li>🎯  Desenvolvimento mental de alta performance.</li>
+            <h2>O Que Você Ganha com a Sessão Personalizada:</h2>
+            <ul class="beneficios-grid">
+                <li>Foco Total do Técnico (Correção Imediata e Profunda).</li>
+                <li>Plano de Treino 100% Adaptado (Eliminação de Fraquezas Específicas).</li>
+                <li>Alto Volume de Repetição em Habilidades-Chave (Consistência e Memória Muscular).</li>
+                <li>Desenvolvimento Acelerado da Tática de Jogo (Estratégia Vencedora).</li>
             </ul>
 
             <div class="chamada-final">
-                <h3>Pare de Apenas Treinar, Comece a Evoluir!</h3>
-                <p>Se você tem um objetivo claro e busca o pódio, o Treino Individual no nosso CT é a sua melhor estratégia. **Invista no seu potencial máximo.**</p>
-                <a href="#contato" class="btn-principal">Fale com um Coach e Monte seu Plano</a>
+                <h3>Pronto para Atingir a Sua Melhor Forma?</h3>
+                <p>Seu desenvolvimento exige foco. Agende seu Treino Individual e dê o passo decisivo rumo ao alto nível.</p>
+                <a href="https://wa.me/5531988887?text=Ola%2C%20gostaria%20de%20agendar%20minha%20aula%20experimental%20de%20Treino%20Individual." class="btn-principal" target="_blank">
+                    Agende Seu Treino Individual
+                </a>
             </div>
-
-            <a href="index.html#treinos" class="btn-voltar">← Voltar para Nossos Treinos</a>
         </div>
     </section>
 
-    </body>
+</body>
 </html>
