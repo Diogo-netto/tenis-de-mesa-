@@ -1,8 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!-- Impede indexação de páginas privadas -->
+<meta name="robots" content="index, follow">
+
+<!-- Impede que o site seja carregado dentro de iframes de outros sites (clickjacking) -->
+<meta http-equiv="X-Frame-Options" content="DENY">
+
+<!-- Controle de conteúdo misto (HTTPS) -->
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+<!-- Evita que dados sensíveis sejam enviados automaticamente -->
+<meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade">
+
+<!-- Controle de detecção de conteúdo malicioso -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+<!-- Protege contra XSS (cross-site scripting) -->
+<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
+<!-- Indica que o site usa HTTPS (boa prática SEO + segurança) -->
+<meta name="format-detection" content="telephone=no">
+
+<!-- Política de Permissões (limita acesso a câmera, microfone, geolocalização etc.) -->
+<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+<!-- Meta OG (Open Graph para Facebook, LinkedIn, WhatsApp etc.) -->
+<meta property="og:title" content="Tênis de Mesa e Treinamento de Alto Nível">
+<meta property="og:description" content="Desenvolva suas habilidades no Tênis de Mesa! Aulas, treinos e estrutura completa no Centro de Treinamento Lima Duarte. Visite-nos!">
+<meta property="og:url" content="https://seudominio.com/">
+<meta property="og:type" content="business">
+<meta property="og:site_name" content="Centro de Treinamento Academia LimaDuartina de Tenis de Mesa">
+
+<!-- Meta Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tênis de Mesa de Alto Nível Lima Duarte-MG">
+<meta name="twitter:description" content="Desenvolva suas habilidades no Tênis de Mesa! Aulas, treinos e estrutura completa na Academia LimaDuartina de Tenis de Mesa . Visite-nos!">
+
+
+<!-- Meta Google / Schema.org -->
+<meta itemprop="name" content=" Academia LimaDuartina de Tenis de Mesa Lima Duarte-MG - Tênis de Mesa">
+<meta itemprop="description" content="Aulas, treinos e estrutura de alto nível para o Tênis de Mesa em Lima Duarte-MG.">
+
+
+<!-- Google Search Console -->
+<meta name="google-site-verification" content="CÓDIGO_DO_GOOGLE_AQUI">
+
+<!-- Bing Webmaster Tools -->
+<meta name="msvalidate.01" content="CÓDIGO_DO_BING_AQUI">
+
+<!-- Facebook Domain Verification -->
+<meta name="facebook-domain-verification" content="CÓDIGO_DO_FACEBOOK_AQUI">
+
+<!-- Google Analytics (tag via script) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=SEU_ID_DO_GA"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'SEU_ID_DO_GA');
+</script>
+
+<!-- Tema do navegador -->
+<meta name="theme-color" content="#000000">
+
+<!-- iOS Web App -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Nome do Site">
+
+<!-- Ícone -->
+<link rel="icon" href="img/favicon-16x16.png" type="image/x-icon">
+
+<link rel="apple-touch-icon" href="img/favicon-16x16.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!-- Descrição (importante para SEO e Google) -->
+<meta name="description" content="O melhor Centro de Treinamento de Tênis de Mesa em Lima Duarte-MG. Aulas para iniciantes, avançados e alta performance. Agende sua aula experimental!">
+
+<!-- Palavras-chave (opcional hoje, mas ainda útil em alguns buscadores) -->
+<meta name="keywords" content="tênis de mesa [Sua Cidade], ping pong [Sua Cidade], aulas de tênis de mesa, CT de tênis de mesa, treinamento de alto nível, Academia LimaDuartina de Tenis de Mesa ">
+
+<!-- Autor -->
+<meta name="author" content="Desenvolvido por: Company WebSites">
     <title>Day Use </title>
     
     <style>
@@ -143,6 +224,12 @@
             background: #00eaff;
             color: #001220;
         }
+
+        
+        .dese a {
+        text-decoration: none;
+        color: red;
+        }
         
         /* Responsividade básica para o container */
         @media (max-width: 768px) {
@@ -156,6 +243,13 @@
             .beneficios-grid {
                 grid-template-columns: 1fr;
             }
+
+            
+        .dese a {
+        text-decoration: none;
+        color: red;
+        }
+
         }
 
         /* --- ESTILOS E ANIMAÇÃO DO CARROSSEL AUTOMÁTICO --- */
@@ -306,9 +400,10 @@
             <div class="chamada-final">
                 <h3>Pronto para Atingir a Sua Melhor Forma?</h3>
                 <p>Sua jornada para uma nova performance começa no primeiro treino. Venha construir sua melhor versão como atleta conosco.</p>
-                <a href="https://wa.me/5531988887?text=Ola%2C%20gostaria%20de%20agendar%20minha%20aula%20experimental%20de%20Treino%20Coletivo." class="btn-principal" target="_blank">
+                <a href="https://wa.me/553288520026?text=Gostaria de fazer uma aula experimental de Treino?." class="btn-principal" target="_blank">
                     Agende Seu Treino Experimental
                 </a>
+                 <p class="dese" title="Clique Aqui">Deselvolvido por: <a href="#" target="_blank">Company WebSites</a></p>
             </div>
         </div>
     </section>

@@ -1,8 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Impede indexação de páginas privadas -->
+<meta name="robots" content="index, follow">
+
+<!-- Impede que o site seja carregado dentro de iframes de outros sites (clickjacking) -->
+<meta http-equiv="X-Frame-Options" content="DENY">
+
+<!-- Controle de conteúdo misto (HTTPS) -->
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+<!-- Evita que dados sensíveis sejam enviados automaticamente -->
+<meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade">
+
+<!-- Controle de detecção de conteúdo malicioso -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+<!-- Protege contra XSS (cross-site scripting) -->
+<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
+<!-- Indica que o site usa HTTPS (boa prática SEO + segurança) -->
+<meta name="format-detection" content="telephone=no">
+
+<!-- Política de Permissões (limita acesso a câmera, microfone, geolocalização etc.) -->
+<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+<!-- Meta OG (Open Graph para Facebook, LinkedIn, WhatsApp etc.) -->
+<meta property="og:title" content="Tênis de Mesa e Treinamento de Alto Nível">
+<meta property="og:description" content="Desenvolva suas habilidades no Tênis de Mesa! Aulas, treinos e estrutura completa no Centro de Treinamento Lima Duarte. Visite-nos!">
+<meta property="og:url" content="https://seudominio.com/">
+<meta property="og:type" content="business">
+<meta property="og:site_name" content="Centro de Treinamento Academia LimaDuartina de Tenis de Mesa">
+
+<!-- Meta Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tênis de Mesa de Alto Nível Lima Duarte-MG">
+<meta name="twitter:description" content="Desenvolva suas habilidades no Tênis de Mesa! Aulas, treinos e estrutura completa na Academia LimaDuartina de Tenis de Mesa . Visite-nos!">
+
+
+<!-- Meta Google / Schema.org -->
+<meta itemprop="name" content=" Academia LimaDuartina de Tenis de Mesa Lima Duarte-MG - Tênis de Mesa">
+<meta itemprop="description" content="Aulas, treinos e estrutura de alto nível para o Tênis de Mesa em Lima Duarte-MG.">
+
+
+<!-- Google Search Console -->
+<meta name="google-site-verification" content="CÓDIGO_DO_GOOGLE_AQUI">
+
+<!-- Bing Webmaster Tools -->
+<meta name="msvalidate.01" content="CÓDIGO_DO_BING_AQUI">
+
+<!-- Facebook Domain Verification -->
+<meta name="facebook-domain-verification" content="CÓDIGO_DO_FACEBOOK_AQUI">
+
+<!-- Google Analytics (tag via script) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=SEU_ID_DO_GA"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'SEU_ID_DO_GA');
+</script>
+
+<!-- Tema do navegador -->
+<meta name="theme-color" content="#000000">
+
+<!-- iOS Web App -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Nome do Site">
+
+<!-- Ícone -->
+<link rel="icon" href="img/favicon-16x16.png" type="image/x-icon">
+
+<link rel="apple-touch-icon" href="img/favicon-16x16.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!-- Descrição (importante para SEO e Google) -->
+<meta name="description" content="O melhor Centro de Treinamento de Tênis de Mesa em Lima Duarte-MG. Aulas para iniciantes, avançados e alta performance. Agende sua aula experimental!">
+
+<!-- Palavras-chave (opcional hoje, mas ainda útil em alguns buscadores) -->
+<meta name="keywords" content="tênis de mesa [Sua Cidade], ping pong [Sua Cidade], aulas de tênis de mesa, CT de tênis de mesa, treinamento de alto nível, Academia LimaDuartina de Tenis de Mesa ">
+
+<!-- Autor -->
+<meta name="author" content="Desenvolvido por: Company WebSites">
+
     <title>ATMLD - Academia Limaduartina de Tênis de Mesa</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -34,7 +116,7 @@
         <div class="hero-content">
             <h2>🏓 Academia de Tenis de Mesa de Lima Duarte</h2>
             <p>Da paixão à alta performance: Unindo esporte profissional, saúde e Qualidade de vida.</p>
-            <a href="https://wa.me/55?text=Gostaria de fazer uma aula experimental de Treino." class="btn" id="botao-aula-experimental">Agende Seu Treino Experimental </a>
+            <a href="https://wa.me/553288520026?text=Gostaria de fazer uma aula experimental de Treino?." class="btn" id="botao-aula-experimental">Agende Seu Treino Experimental </a>
         </div>
     </section>
 
@@ -139,21 +221,23 @@
             <h4>ATMLD</h4>
             <p>Siga-nos nas redes sociais</p>
             <div class="social-links">
-                <a href="#" target="_blank">
+                <a href="https://www.instagram.com/altm_2025?igsh=aXFicnBqZGdmaTQz&utm_source=qr" target="_blank">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="#" target="_blank">
+                <a href="https://wa.me/553288520026?text=Gostaria de fazer uma aula experimental de Treino?." target="_blank">
                     <i class="fab fa-whatsapp"></i>
                 </a>
-                <a href="#">
+                <a href="mailto:academialimaduartinatm@gmail.com">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
             <p class="copy">&copy; 2025 ATMLD - Todos os direitos reservados</p>
+            <p class="dese" title="Clique Aqui">Deselvolvido por: <a href="#" target="_blank">Diogo José Morais Netto</a></p>
+        
         </div>
     </footer>
 
-    <a href="#" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/553288520026?text=Gostaria de fazer uma aula experimental de Treino?." class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
